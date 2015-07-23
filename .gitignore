@@ -3,3 +3,9 @@
 *.aux
 *.gz
 *.dvi
+*.bib
+!lit.bib
+*.bbl
+*.bcf
+*.blg
+*.xml
