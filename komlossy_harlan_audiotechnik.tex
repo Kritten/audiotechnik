@@ -47,6 +47,12 @@ Aufgrund der \textcolor{red}{Standardisierung der Seashore-Tests} und der grundl
 Einer dieser Tests, welcher den Seashore-Test als Grundlage genutzt hat ist der "Wiener Test für Musikalität"\cite{laengle:2003}. Dieser Test entstand im Februar 2003 in Zusammenarbeit diverser Psychologen und Pädagogen unter anderem der Universität Wien. Der Test war der erste computerbasierte Musikbegabungstest und richtete sich an Vor- oder Grundschulkinder. Der "Wiener Test für Musikalität" greift zwei von dem Seashore-Test untersuchte musikalische Fähigkeiten auf: Zum einen wird die Fähigkeit der Wahrnehmung von Rhythmusschwankungen der Kinder geprüft. Dazu werden drei Töne vorgespielt, wobei der erste und der letzte Ton im Takt gespielt werden. Der Ton in der Mitte wird manchmal leicht versetzt zum eigentlichen zweiten Schlag gespielt. Der Test besteht darin, anzugeben ob der zweite Ton vorgezogen, auf den Schlag genau oder etwas zu spät gespielt wird.//
 Der zweite Teil des Tests untersucht die Fähigkeit Änderung in der Tonhöhe zweier Töne zu Unterscheiden. Dazu wird ein Zweiklang vorgespielt und man muss angeben welcher der drei Fälle eintritt: Im ersten Fall gleitet einer der Töne etwas nach oben und wieder zurück, im zweiten Fall gleitet einer der Töne etwas nach unten und im dritten Fall verändert sich keiner der Töne.
 \section{Konzept}
+Um eine Software zum Erkennen musikalischer Fähigkeiten umzusetzen haben wir uns an dem "Wiener Test für Musikalität" orientiert.
+Die Grund für diese Wahl war unsere Absicht eine Nutzerstudie durchzuführen. Für eine sinnvolle und zielführende Konzeptionierung dieser Nutzerstudie sollten die Anzahl der Tests überschaubar sein und die Tests untereinander vergleichbar sein.
+Daher wir haben die Tests zur Tonhöhen- und Rhythmusänderungswahrnehmung als Grundlage genommen und um den Aspekt des Erinnerns von Tonfolgen erweitert.
+Um die Vergleichbarkeit der Tests weiter zu erhöhen haben wir auch den Ablauf und die Bedienung der Tests ähnlich gestaltet.
+Zu Beginn kann sich eine Melodie beziehungsweise ein Rhythmus einmal oder bei Bedarf mehrfach angehört werden. Anschließend "'startet"' man per Knopfdruck den eigentlichen Test. Die zuvor angehörte Tonfolge kann nun nicht mehr wiederholt werden. Die Rekapitulation der Tonfolgen unterscheidet sich leicht bei dem Rhythmus- beziehungsweise Melodietest. Bei dem Rhythmustest muss man die Länge jedes Tones der Tonfolge angeben. Die Rhythmen sind aus Tönen mit insgesamt drei verschiedenen Tonlängen zusammengesetzt. Man muss also für jeden Ton angeben ob er kurz, mittel oder lang ist. Die Länge der mittleren Tonlänge kann man sich auch nach dem Starten des Tests noch anhören um eine Referenz zu erhalten.
+Bei dem Melodietest kann man sich den ersten Ton der Tonfolge anhören. Anschließend muss man, beginnend bei dem Zweiten für jeden Ton angeben, ob der aktuell betrachtete Ton relativ zum vorherigen Ton höher, gleich oder tiefer in der Tonhöhe liegt.
 
 \section{Implementierung}
 
@@ -72,6 +78,7 @@ Außerdem kann versucht werden Unterschiede in der Erfolgsrate zwischen Rhythmus
 \subsubsection{Ablauf}
 Um die nötigen Informationen zu erheben musste vor dem eigentlichen Test ein Fragebogen beantwortet werden, welcher Alter, Geschlecht und musikalische Vorkenntnisse abfragt. Die musikalischen Vorkenntnisse haben die Kandidaten auf einer Skala von 1-10 selber bewertet. Allerdings haben hier die begleitenden Studienautoren beratend eingegriffen um Vergleichbarkeit zu gewährleisten.\\
 Darauf folgend wurde der Testperson die Programmoberfläche und der Ablauf der Tests erklärt.\\ 
+
 Die Kandidaten mussten jeweils eine Testreihe zum Rhythmusgedächtnis und eine zum Melodiegedächnis absolvieren. Die Reihenfolge hat wurde alternierend gewählt um Lerneffekte auszuschließen. \\
 %Test reihe selber hier?
 Nach den Tests mussten die Kandidaten noch einen weiteren kurzen Fragebogen ausfüllen in dem aufgenommen wurde wie schwer sie die einzelnen Tests gefunden haben. Außerdem stand hier ein Textfeld für freie Kommentare zur Verfügung. 
