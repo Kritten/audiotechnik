@@ -69,31 +69,32 @@ Eine grafische Oberfläche ist durch die vorgegebenen Objekte, von denen einige 
 Die Tonfolgen werden über das MIDI-Interface von Max an die Soundkarte des Computer weitergegeben um für den Nutzer hörbar gemacht zu werden. Mit dem "'makenote"'-Objekt\footnote{https://docs.cycling74.com/max5/refpages/max-ref/makenote.html} von Max\slash MSP werden MIDI-Befehle erzeugt. Als Eingabe-Parameter des Objektes haben wir die Tonhöhe des aktuellen Tones, die Anschlagsstärke und die Dauer des Tones  eingegeben. Das Objekt gibt daraufhin die Tonhöhe als Zahl gepaart mit der Anschlagstärke aus (note-on-Befehl). Nachdem die als Eingabe-Parameter übergebene Länge des Tones zeitlich verstrichen ist, sendet das Objekt erneut die Tonhöhe als Ausgabe aus, dieses Mal jedoch gepaart mit der Anschlagstärke 0 (note-off-Befehl). Die Ausgaben des "'makenote"'-Objektes gehen direkt in das "'noteout"'-Objekt\footnote{https://docs.cycling74.com/max5/refpages/max-ref/noteout.html}. Dieses nimmt die Eingabe-Parameter und sendet die note-on- und note-of-Befehle an den MIDI-Port. Als zusätzlichen Eingabe-Parameter kann man bei dem "'noteout"'-Objekt den MIDI-Kanal wählen. Da wir jedoch nur Klaviertöne benötigen haben wir die Standardeinstellungen, Kanal 1, übernommen.
 
 \section{Studie}
-In diesem Kapitel wird die Konzeption, Durchführung, Beobachtungen, qualitative und statistische Auswertung der von uns durchgeführten Studie vorgestellt.Zuletzt werden die Vorgehensweisen und Ergebnisse diskutiert.
+In diesem Kapitel wird die Konzeption, Durchführung, Beobachtung, qualitative und statistische Auswertung der von uns durchgeführten Studie vorgestellt. Zuletzt werden die Vorgehensweisen und Ergebnisse diskutiert.
 
 \subsection{Design \& Fragestellungen}
-In unserer Studie sollte von möglichst vielen Testpersonen sowohl das Melodie- als auch das Rhythmusgedächtnis getestet werden. Dafür haben wir die entwickelten Programme verwendet.\\
-Außerdem sollte die Studie Auskunft darüber geben welche Faktoren zu einer guten Leistung in den getesteten Bereichen führt. Hierfür erhoben wir folgende Informationen über die Teilnehmer:\\
+In unserer Studie sollte von möglichst vielen Testpersonen sowohl das Melodie- als auch das Rhythmusgedächtnis getestet werden. Dafür haben wir die von uns entwickelten Programme verwendet.\\
+Außerdem sollte die Studie Auskunft darüber geben welche Faktoren zu einer guten Leistung in den getesteten Bereichen führt. Hierfür erhoben wir folgende Informationen über die Teilnehmer:
 \begin{itemize} 
 \item Alter
 \item Geschlecht
 \item Musikalische Vorkenntnisse
-\item Empfundene Schwierigkeit bei beiden Tests
+\item Antworten des Testes
 \item Abspielanzahl der einzelnen Samples
+\item Empfundene Schwierigkeit bei beiden Tests
 \end{itemize}
-Die zentrale Hypothese die es zu validieren galt war dass musikalische Vorkenntnisse hilfreich bei der Bewältigung der Aufgaben sind. \\
-Auch ob Alter oder Geschlecht einen messbaren Unterschied machen interessierte uns. Ebenfalls haben wir untersucht ob die empfundene Schwierigkeit mit dem tatsächlichen Ergebnis der Kandidaten korreliert. 
-Außerdem kann versucht werden Unterschiede in der Erfolgsrate zwischen Rhythmus- und Melodiegedächnis zu finden. 
+Unsere zentrale Hypothese ist, dass musikalische Vorkenntnisse hilfreich bei der Bewältigung der Aufgaben sind. Diese galt es zu validieren.\\
+Auch ob Alter oder Geschlecht einen messbaren Unterschied machen interessierte uns. Ebenfalls haben wir untersucht ob die empfundene Schwierigkeit mit dem tatsächlichen Ergebnis der Kandidaten korreliert.\\ 
+Unterschiede zwischen den beiden Tests wollten wir auch analysieren. Also ob es gleich schwer ist sich Rhythmen oder Melodien zu merken. Und auch ob Personen immer in beiden Tests ähnlich abschneiden oder es Personen gibt denen eine Aufgabe deutlich leichter fällt.
 % War der 2te Test erfolgreicher?
 \subsection{Durchführung}
 
 \subsubsection{Ablauf}
 Um die nötigen Informationen zu erheben musste vor dem eigentlichen Test ein Fragebogen beantwortet werden, welcher Alter, Geschlecht und musikalische Vorkenntnisse abfragt. Die musikalischen Vorkenntnisse haben die Kandidaten auf einer Skala von 1-10 selber bewertet. Allerdings haben hier die begleitenden Studienautoren beratend eingegriffen um Vergleichbarkeit zu gewährleisten.\\
 Darauf folgend wurde der Testperson die Programmoberfläche und der Ablauf der Tests erklärt.\\ 
-Die Kandidaten mussten jeweils eine Testreihe zum Rhythmusgedächtnis und eine zum Melodiegedächnis absolvieren. Die Reihenfolge hat wurde alternierend gewählt um Lerneffekte auszuschließen. \\
+Die Kandidaten mussten jeweils eine Testreihe zum Rhythmusgedächtnis und eine zum Melodiegedächnis absolvieren. Die Reihenfolge wurde zwischen den Teilnehmern alternierend gewählt um Lerneffekte auszuschließen. \\
 
-Bei beiden Testreihen gibt es fünf verschiedene Tonfolgen. Jede dieser Tonfolgen besteht aus sechs bis elf einzelnen Tönen. Die erste Tonfolge ist bei beiden Tests eine bekannte Melodie (Jingle Bells) beziehungsweise eine einfache Rhythmusfolge. Diese ersten beiden Tonfolgen sind als Vorbereitung auf die anderen Tonfolgen gedacht damit der Nutzer sich mit dem Ablauf und der Bedienung des Tests vertraut macht.
-Die übrigen vier Rhythmusfolgen waren Eigenkompositionen mit komplexeren Rhythmen als der Einstiegsrhythmus.
+Bei beiden Testreihen gibt es fünf verschiedene Tonfolgen. Jede besteht aus sechs bis elf einzelnen Tönen. Die erste Tonfolge ist bei beiden Tests als Vorbereitung gedacht. Diese sind möglichst einfach gewählt: Eine bekannte Melodie (Jingle Bells) und eine einfache Rhythmusfolge. Durch diese Beispiele wird der Kandidat mit dem Ablauf, der Programmbedienung und der Antwortform bekannt gemacht. Die Resultate hiervon wurden nicht in die Auswertung übernommen. \\
+Die übrigen vier Rhythmusfolgen waren Eigenkompositionen mit höherer Komplexität als der Einstiegsrhythmus.
 Drei unserer vier übrigen Melodiefolgen waren Teile einer Melodie für unsere Nutzer möglichst unbekannter Musikstücke.
 Zwei dieser Melodien stammen aus dem Lied "`The Darkest Nights"' der Band "`As I Lay Dying"', die dritte Melodie stammt \textcolor{red}{aus der irgendwas von bach}.\\
 Die fünfte Melodie ist eine selbst komponierte Tonfolge. Durch diese Diversität der Melodien erhoffen wir uns repräsentative Ergebnisse für das Melodiegedächtnis \textcolor{red}{<- dann eigentlich auch bei den rhythmen, da aber alles eigenkomposition}. Die Tonfolgen dürfen beliebig häufig angehört werden, bevor der Teilnehmer die Antworten gibt.
@@ -103,7 +104,7 @@ Nach den Tests mussten die Kandidaten noch einen weiteren kurzen Fragebogen ausf
 \subsubsection{Teilnehmer}
 Die Studie wurde mit 23 Teilnehmern durchgeführt.\\
 Die meisten wurden aus unserem studentischen Umfeld akquiriert, was die unrepräsentative Altersverteilung (Abbildung \ref{Alter}), mit einer deutlichen Häufung im Bereich 20-25 Jahre, erklärt. Die davon abweichenden Kandidaten sind Familienmitglieder und andere Bekannte.
-\begin{figure}[H]
+\begin{figure}[h]
 \includegraphics[width=1.0\linewidth]{Abbildungen/Altersverteilung.png}
 \caption{Altersverteilung}
 \label{Alter}
@@ -112,14 +113,14 @@ Ungefähr die Hälfte der Teilnehmer stammt aus dem Bereich der Informatik. Die 
 Es ist uns gelungen gleichmäßig viele weibliche und männliche Teilnehmer zu testen (11 Weibliche und 12 Männliche). 
 \subsection{Auswertung}
 Als Maß für den Erfolg diente die relative Erfolgshäufigkeit. Hierbei wurden die Anzahl richtig beantworteten Töne durch die Anzahl aller Töne geteilt. So sind alle Töne gleich gewichtet. Die Länge der einzelnen Tonfolgen hat keinen Einfluss.
-\subsubsection{Statistische}
+\subsubsection{Statistische Auswertung}
 Insgesamt waren 72,3\% der Antworten richtig. Wobei Melodien etwas besser wiedergegeben wurden (73,6\%) als Rhythmen (71,0\%). Abbildung \ref{MelodieGegenRhythmus} zeigt dass generell Testpersonen mit guten Leistungen im Melodietest auch im Rhythmustest erfolgreich waren und umgekehrt.
 \begin{figure}[H]
 \includegraphics[width=1.0\linewidth]{Abbildungen/Melodie-Rhythmus.png}
 \caption{Melodie gegen Rhythmus}
 \label{MelodieGegenRhythmus}
 \end{figure}
-Der visuelle Eindruck einer Korrelation wird vom linearen Korrelationskoeffizient nach Pearsons \textcolor{red}{(Quelle)} (0,59) unterstützt. Und auch der Rangkorrelationskoeffizient nach Spearman \textcolor{red}{(Quelle)} (0,60) widerspricht diesem nicht.\\
+Der visuelle Eindruck eines Zusammenhangs wird vom linearen Korrelationskoeffizient nach Pearsons \cite{wiki:korrelationskoeffizient} (0,59) unterstützt. Und auch der Rangkorrelationskoeffizient nach Spearman \cite{wiki:rangkorrelationskoeffizient} (0,60) widerspricht diesem nicht.\\
 
 Die von uns aufgestellte Hypothese, dass musikalische Vorkenntnisse das Melodie- und Rhythmusgedächnis stärken wird von den Ergebnissen unserer Studie bestätigt. Abbildung \ref{ErfolgGegenVorkenntnisse} zeigt genau diesen Zusammenhang.
 %http://www.socscistatistics.com/tests/spearman/Default2.aspx
@@ -161,30 +162,33 @@ Während der Durchführung der Studie ist uns aufgefallen das scheinbar viele Ka
 \label{Tonlängen}
 \end{figure}
 Die Vermutung wurde bestätigt. Die Erfolgsrate der langen Töne ist, mit nur 50\%, deutlich die schlechteste. Die Kurzen dagegen wurden in über 90\% der Fälle erkannt. Beim Melodietest sind keine ähnlich großen Unterschiede aufgetreten. Die verringernden Tonfolgen wurden zwar schlechter wiedergegeben als die anderen Fällen, aber die Unterschiede betragen nur 5-7\%.
-\subsubsection{Qualitative}
-\subsubsection{Schlussfolgerungen \textcolor{green}{(Interpretation?)}}
-Für die deutlich stärker ausgeprägte Korrelation zwischen Vorkenntnissen und Rhythmusgedächnis \textcolor{green}{als} zwischen Vorkenntnissen und Melodiegedächnis haben wir zwei mögliche Erklärungen. Zum einen kann es sein, dass das Merken von Tonlängen eine anspruchsvollere Tätigkeit ist als das Merken von Tonhöhe. Somit haben Vorkenntnisse und Erfahrung einen größeren Einfluss. \\
-Eine andere Erklärung könnte sein, dass gerade bei weniger ausgeprägten musikalischen Vorkenntnissen viele Personen im alltäglichen Leben mehr mit Melodien als mit Rhythmen beziehungsweise Tonlängen konfrontiert werden. Dadurch würde auch ohne explizite musikalische Ausbildung oder Erfahrungen das Melodiegedächnis gefördert werden.\\
-\subsection{Beobachtungen}
+\subsubsection{Beobachtungen}
 Beim Begleiten der Testpersonen durch die Studie konnten wir noch Interessantes abseits der erhobenen Daten beobachten, worauf hier eingegangen werden soll.\\
 
-Wir haben zwischen den Kandidaten unterschiedliche Vorgehensweisen beim Merken der Samples erkannt. Insbesondere die Frequenz des Abspielens variierte stark. Es gab Kandidaten die haben sich ein Stück nur zweimal angehört. Zwischen den \textcolor{green}{Abspielungen} haben sie versucht sich an das Gehörte zu erinnern und sich selber mental vorzuspielen. Beim zweiten mal haben sie ihre Vorstellung und die Wirklichkeit verglichen. Dies hat ihnen gereicht um sich sicher zu fühlen das Sample korrekt wiedergeben zu können.\\
+Wir haben zwischen den Kandidaten unterschiedliche Vorgehensweisen beim Merken der Tonfolgen erkannt. Insbesondere die Frequenz des Abspielens variierte stark. Es gab Kandidaten die haben sich ein Stück nur zweimal angehört. Zwischen den Abspielungen haben sie versucht sich an das Gehörte zu erinnern und sich selber mental vorzuspielen. Beim zweiten mal haben sie ihre Vorstellung und die Wirklichkeit verglichen. Dies hat ihnen gereicht um sich sicher zu fühlen korrekt antworten zu können.\\
 Andere dagegen haben die Beispiele sobald sie endeten wieder abgespielt und keine Pausen entstehen lassen. Dieser Ansatz hat Abspielhäufigkeiten von 10 Wiederholungen und mehr verursacht.\\ 
 Was zu diesen unterschiedlichen Ansätzen zum Merken führt und ob diese verschieden gute Ergebnisse erreichen kann mit unserer Studie nicht beantwortet werden.\\
 
-Ein weitere Besonderheit die wir beobachtet haben ist das einige Teilnehmer Probleme hatten die gemerkte Tonfolge in die von uns erwartete Notation zu überführen. Da viele Kandidaten das gemerkte Beispiel summten, konnte der beisitzende Experte klar erkennen das es sich korrekt gemerkt wurde. Doch beim Einordnen der Töne in höher, gleich, tiefer beziehungsweise kurz, mittel, lang wurden trotzdem Fehler gemacht.
-\subsection{Fazit \& Diskussion}
-Wir konnten in unserer Studie einige Ergebnisse sammeln und Fragestellungen beantworten. Noch mehr haben wir allerdings Denkanstöße bekommen und Details aufgedeckt an den man weiter arbeiten könnte.\\
+Ein weitere Besonderheit die wir beobachtet haben ist das einige Teilnehmer Probleme hatten die gemerkte Tonfolge in die von uns erwartete Notation zu überführen. Da viele Kandidaten das gemerkte Beispiel summten, konnte der begleitende Experte klar erkennen das es sich korrekt gemerkt wurde. Doch beim Einordnen der Töne in höher, gleich, tiefer beziehungsweise kurz, mittel, lang wurden trotzdem Fehler gemacht.
+\subsubsection{Schlussfolgerungen}
+Die gesammelten Informationen müssen mit den Rahmenbedingungen und den Schwierigkeiten der Studie in Bezug gesetzt werden um Schlussfolgerungen ziehen zu können.
+
+Das musikalische Vorkenntnisse und Erfahrungen bei der Bearbeitung der Aufgaben Vorteile bringen lies sich bestätigen. Doch wie genau diese Vorteile aussehen konnte nicht beantwortet werden. Ob Personen mit Vorkenntnissen sich tatsächlich die Tonfolgen besser merken konnten, oder einfach der häufige Umgang mit Tönen, Noten und Rhythmen das übersetzten in unsere Antwortform erleichtert hat ist nicht klar zu erkennen. 
+Für die stärker ausgeprägte Korrelation zwischen Vorkenntnissen und Rhythmusgedächnis als zwischen Vorkenntnissen und Melodiegedächnis haben wir zwei mögliche Erklärungen. Zum einen kann es sein, dass das Erkennen,Merken und Wiedergeben von Tonlängen eine anspruchsvollere Tätigkeit ist als von Tonhöhen. Somit haben Vorkenntnisse und Erfahrung einen größeren Einfluss. \\
+Eine andere Erklärung könnte sein, dass gerade bei weniger ausgeprägten musikalischen Vorkenntnissen viele Personen im alltäglichen Leben mehr mit Melodien als mit Rhythmen beziehungsweise Tonlängen konfrontiert werden. Dadurch würde auch ohne explizite musikalische Ausbildung oder Erfahrungen das Melodiegedächnis gefördert werden.\\
+%Empfindung
+%Tonhöhenänderung / Länge
+\subsection{\textcolor{green}{Diskussion}}
 Die erzielten Ergebnisse sind mit gewisser Vorsicht zu betrachten. Uns sind während und nach der Studie Kritikpunkte aufgefallen die die Aussagekraft gegebenenfalls abschwächen.\\
 Wir hatten zu wenig Teilnehmer und diese waren auch nicht ausreichend repräsentativ verteilt. Wir hätten uns entweder für einen Test nur innerhalb einer kleineren Zielgruppe entscheiden können. Zum Beispiel Studierende. Oder wir hätten repräsentative Stichprobe der Bevölkerung gebraucht was natürlich einen erheblichen Mehraufwand bedeutet.\\
 Auch das Nutzen von festgelegten Rhythmen und Melodien könnte verzerrte Ergebnisse produziert haben. Für bestimmte Zielsetzungen hätten zufällig generierte Beispiele sichere Resultate hervorgebracht. \\
-Das Problem, dass Kandidaten trotzt korrektem Gedächtnis nicht in der Lage waren fehlerfrei zu antworten zeigt Verbesserungspotential an den gewählten Antwortsystemen. Wenn, wie hier, nur die Gedächtnisleistung getestet werden soll muss ein Weg gefunden werden das solche Fehler nicht auftreten. Dies könnte durch ein intuitiveres System oder eine ausführlichere Einführung erreicht werden.
-%Transfer Gemerktes -> Notation gemessen, nicht das gedächnis selber\\
+Das Problem, dass Kandidaten trotzt korrektem Gedächtnis nicht in der Lage waren fehlerfrei zu antworten zeigt Verbesserungspotential an den gewählten Antwortsystemen. Wenn, wie hier, nur die Gedächtnisleistung getestet werden soll muss ein Weg gefunden werden das solche Fehler nicht auftreten. Dies könnte durch ein intuitiveres System oder eine ausführlichere Einführung erreicht werden.\\
 %Zuviele unregelmäßig ändernde Parameter: Alter, Studiengang, ..\\
 %Vergleichbarkeit Rhythmus <-> Melodie\\
-%Auswahl der Samples -> nicht random \\
 
 
 \section{Fazit}
+%Wir haben ein Programm .. bla bla .. Erfolg .. 
+Wir konnten in unserer Studie einige Ergebnisse sammeln und Fragestellungen beantworten. Noch mehr haben wir allerdings Denkanstöße bekommen und Details aufgedeckt an den man weiter arbeiten könnte.\\
 \printbibliography
 \end{document}
