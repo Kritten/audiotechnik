@@ -3,6 +3,8 @@
 \usepackage[german]{babel}
 \usepackage[backend=bibtex,urldate=long]{biblatex}
 \usepackage{color}
+\usepackage{float}
+\usepackage{graphicx}
 \addbibresource{lit.bib}
 \begin{document}
 
@@ -97,43 +99,63 @@ Nach den Tests mussten die Kandidaten noch einen weiteren kurzen Fragebogen ausf
 \subsubsection{Teilnehmer}
 Die Studie wurde mit 23 Teilnehmern durchgeführt.\\
 Die meisten wurden aus unserem studentischen Umfeld akquiriert, was die unrepräsentative Altersverteilung, mit einer deutlichen Häufung im Bereich 20-25 Jahre, erklärt. Die davon abweichenden Kandidaten sind Familienmitglieder und andere Bekannte.
-\begin{itemize} 
-\item \textcolor{red}{BILD DER ALTERSVERTEILUNG}
-\end{itemize}
+\begin{figure}[H]
+\includegraphics[width=1.0\linewidth]{Abbildungen/Altersverteilung.png}
+\caption{Altersverteilung}
+\label{Alter}
+\end{figure}
 Ungefähr die Hälfte der Teilnehmer stammt aus dem Bereich der Informatik. Die anderen verteilen sich auf weitere Studienfächer, Schüler und Berufstätige.\\
 Es ist uns gelungen gleichmäßig viele weibliche und männliche Teilnehmer zu testen (11 Weibliche und 12 Männliche). 
 \subsection{Auswertung}
 Als Maß für den Erfolg diente die relative Erfolgshäufigkeit. Hierbei wurden die Anzahl richtig beantworteten Töne durch die Anzahl aller Töne geteilt. So sind alle Töne gleich gewichtet. Die Länge der einzelnen Tonfolgen hat keinen Einfluss.
 \subsubsection{Statistische}
 Insgesamt waren 72,3\% der Antworten richtig. Wobei Melodien etwas besser wiedergegeben wurden (73,6\%) als Rhythmen (71,0\%). Bis auf eine Ausnahme gilt das Testpersonen mit guten Leistungen im Melodietest auch im Rhythmustest erfolgreich waren und umgekehrt.
-\begin{itemize} 
-\item \textcolor{red}{SCATTERPLOT Erfolgsrate Rhtym -> Erfolgsrate Melodie}
-\end{itemize}
+\begin{figure}[H]
+\includegraphics[width=1.0\linewidth]{Abbildungen/Melodie-Rhythmus.png}
+\caption{Melodie gegen Rhythmus}
+\label{Alter}
+\end{figure}
 Der visuelle Eindruck einer Korrelation wird vom linearen Korrelationskoeffizient nach Pearsons \textcolor{red}{(Quelle)} (0,59) unterstützt. Und auch der Rangkorrelationskoeffizient nach Spearman \textcolor{red}{(Quelle)} (0,60) widerspricht diesem nicht.\\
 
 Die aufgestellte Hypothese, dass musikalische Vorkenntnisse das Melodie- und Rhythmusgedächnis stärken wird von den Ergebnissen unserer Studie bestätigt.
 %http://www.socscistatistics.com/tests/spearman/Default2.aspx
-\begin{itemize} 
-\item \textcolor{red}{SCATTERPLOT Vorkenntnisse -> Erfolgsrate Rhtym und Melodie}
-\end{itemize}
+\begin{figure}[H]
+\includegraphics[width=1.0\linewidth]{Abbildungen/Einschaetzung-Melodie_Rhythmus.png}
+\caption{Erfolgsraten gegen Vorkenntnisse (Melodie Rot, Rhythmus Blau)}
+\label{Alter}
+\end{figure}
 Die Korrelationskoeffizienten belegen dies (Pearson: 0.50 für Melodie, 0.59 für Rhythmus. Spearman: 0.54 für Melodie, 0.65 für Rhythmus).\\\\
 
-Eine Zusammenhang zwischen Alter oder Geschlecht und der erbrachten Leistung konnte nicht gefunden werden.
-\begin{itemize} 
-\item \textcolor{red}{PLOT geschlecht -> Erfolg}
-\end{itemize}
-
+Eine Zusammenhang zwischen Alter oder Geschlecht und der erbrachten Leistung konnte nicht gefunden werden.\\
+\begin{figure}[H]
+\includegraphics[width=1.0\linewidth]{Abbildungen/Geschlecht-Erfolg.png}
+\caption{Erfolgsraten der Geschlechter}
+\label{Geschlechter}
+\end{figure}
 Die empfundene Schwierigkeit der Aufgaben hängt mit den tatsächlichen Ergebnissen wie zu erwarten zusammen.
-\begin{itemize} 
-\item \textcolor{red}{PLOT Empfindung -> Erfolg}
-\end{itemize}
+\begin{figure}[H]
+\includegraphics[width=1.0\linewidth]{Abbildungen/Empfindung-Erfolg_Melodie.png}
+\caption{Empfindung gegen Erfolg - Melodie}
+\label{Geschlechter}
+\end{figure}
+\begin{figure}[H]
+\includegraphics[width=1.0\linewidth]{Abbildungen/Empfindugn-Erfolg_Rhythmus.png}
+\caption{Empfindung gegen Erfolg - Rhythmus}
+\label{Geschlechter}
+\end{figure}
 Die Korrelationskoeffizienten zeigen dies auf (Pearson: -0.54 für Melodie, -0.59 für Rhythmus. Spearman: -0.57 für Melodie, -0.54 für Rhythmus).
 
 Während der Durchführung der Studie ist uns aufgefallen das scheinbar viele Kandidaten besonders Probleme damit hatten die langen Töne korrekt zu erkennen. Also haben ausgewertet wie gut die einzelnen Längen der Rhythmus-Tonfolgen wiedergegeben wurden. Und ob Unterschiede in der Erfolgshäufigkeit zwischen höheren, gleichen und niedrigeren Tönen des Melodietestes gab.
-\begin{itemize} 
-\item \textcolor{red}{PLOT Längen -> Erfolg}
-\item \textcolor{red}{PLOT Höhenunterschiede -> Erfolg}
-\end{itemize}
+\begin{figure}[H]
+\includegraphics[width=1.0\linewidth]{Abbildungen/Tonhoehenaenderung-Erfolg.png}
+\caption{Tonhöhenänderung gegen Erfolg}
+\label{Tonhöhen}
+\end{figure}
+\begin{figure}[H]
+\includegraphics[width=1.0\linewidth]{Abbildungen/Tonlaenge-Erfolg.png}
+\caption{Tonlängen gegen Erfolg}
+\label{Tonlängen}
+\end{figure}
 Die Vermutung wurde bestätigt. Die Erfolgsrate der langen Töne ist, mit nur 50\%, deutlich die schlechteste. Die Kurzen dagegen wurden in über 90\% der Fälle erkannt. Beim Melodietest sind keine ähnlich großen Unterschiede aufgetreten. Die verringernden Tonfolgen wurden zwar schlechter wiedergegeben als die anderen Fällen, aber die Unterschiede betragen nur 5-7\%.
 \subsubsection{Qualitative}
 \subsubsection{Schlussfolgerungen \textcolor{green}{(Interpretation?)}}
