@@ -555,7 +555,7 @@
 \def\fps@figure{tbp}
 \def\ftype@figure{1}
 \def\ext@figure{lof}
-\def\fnum@figure{Figure \thefigure}
+\def\fnum@figure{Abbildung \thefigure}
 \def\figure{\@float{figure}}
 %\let\endfigure\end@float
 \def\endfigure{\end@float} 		% Gerry January 2008
@@ -778,13 +778,13 @@
    \color@endgroup} %g}
 \fi
 \setcounter{footnote}{0}
-\section*{ABSTRACT}\normalsize %\the\parskip \the\baselineskip%\ninept
+\section*{ZUSAMMENFASSUNG}\normalsize %\the\parskip \the\baselineskip%\ninept
 }
 
 \def\endabstract{\if@twocolumn\else\endquotation\fi}
 
 \def\keywords{\if@twocolumn
-\section*{Keywords}
+\section*{Schl\"usselw\"orter}
 \else \small
 \quotation
 \fi}
