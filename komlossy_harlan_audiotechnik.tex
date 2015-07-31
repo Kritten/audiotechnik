@@ -67,7 +67,22 @@ Im Gegensatz zum "`Wiener Test für Musikalität"' wollten wir nicht die Fähigk
 
 \section{Implementierung}
 Die beiden Programme haben wir mit der grafischen Entwicklungsumgebung und visuellen Programmiersprache Max\slash MSP\footnote{https://cycling74.com/products/max/} implementiert. Die erste Version von Max\slash MSP (MSP steht für Max Signal Processing) \cite{wiki:max} wurde 1988 entwickelt und wird seitdem von Komponisten, Musikern und Künstlern eingesetzt um interaktive Programme zu entwickeln. Da Max\slash MSP eine grafische Programmiersprache und zusätzlich auf audiobezogene Software ausgelegt ist eignet sich die Sprache für einen Test zur Feststellung musikalischer Fähigkeiten.\\
-Eine grafische Oberfläche ist durch die vorgegebenen Objekte, von denen einige unter anderem aus Knöpfen, Schiebereglern, Optionsschaltflächen oder Kombinationen aus diesen bestehen, schnell und mit geringem Aufwand umzusetzen. Durch diese Eingabeobjekte erfolgt auch die Interaktion mit dem Testprogramm. So erfolgt zum Beispiel die Auswahl der Tonfolgen mithilfe einer Optionsschaltfläche.\\
+Eine grafische Oberfläche ist durch die vorgegebenen Objekte, von denen einige unter anderem aus Knöpfen, Schiebereglern, Optionsschaltflächen oder Kombinationen aus diesen bestehen, schnell und mit geringem Aufwand umzusetzen. Durch diese Eingabeobjekte erfolgt auch die Interaktion mit dem Testprogramm. In Abbildung~\ref{maxfirststep} ist die Interaktionsoberfläche unseres Melodieprogramms dargestellt. Neben einem Feld für die Teilnehmernummer für die Studie haben wir in der obersten Reihe drei Knöpfe. Der erste erstellt einen neuen Nutzer, der zweite erstellt einen neuen Test und der letzte startet den Test der aktuellen Tonfolge.
+Unter den Knöpfen befindet sich eine Optionsschaltfläche zum Auswählen der zu Testenden Tonfolge. Diese kann sich mit dem "'play~melody"'-Knopf angehört werden.\\
+Drückt man auf "'start~test"' geht die Oberfläche in den zweiten Präsentationsstatus über (Abbildung~\ref{maxfirststep}). Dort kann man sich im Fall des Melodiegedächtnistests den erste Ton der Folge noch einmal anhören ("play~first~note"). Die Eingabe der erinnerten Tonfolgen erfolgt dann über die in der letzten Zeile angezeigten Optionsschaltflächen. Möchte man das eingegebene Ergebnis speichern drückt man auf den "'save~input"'-Knopf. 
+
+\begin{figure}[H]
+\includegraphics[width=1.0\linewidth]{Abbildungen/firststep.png}
+\caption{Oberfläche zum Anhören der Tonfolgen}
+\label{maxfirststep}
+\end{figure}
+
+\begin{figure}[H]
+\includegraphics[width=1.0\linewidth]{Abbildungen/secondstep.png}
+\caption{Oberfläche zum Rekapitulieren der Tonfolgen}
+\label{maxsecondstep}
+\end{figure}
+
 Die Tonfolgen werden über das MIDI-Interface von Max an die Soundkarte des Computer weitergegeben um für den Nutzer hörbar gemacht zu werden. Mit dem "'makenote"'-Objekt\footnote{https://docs.cycling74.com/max5/refpages/max-ref/makenote.html} von Max\slash MSP werden MIDI-Befehle erzeugt. Als Eingabe-Parameter des Objektes haben wir die Tonhöhe des aktuellen Tones, die Anschlagsstärke und die Dauer des Tones  eingegeben. Das Objekt gibt daraufhin die Tonhöhe als Zahl gepaart mit der Anschlagstärke aus (note-on-Befehl). Nachdem die als Eingabe-Parameter übergebene Länge des Tones zeitlich verstrichen ist, sendet das Objekt erneut die Tonhöhe als Ausgabe aus, dieses Mal jedoch gepaart mit der Anschlagstärke 0 (note-off-Befehl).\\
 Die Ausgaben des "'makenote"'-Objektes gehen direkt in das "'noteout"'-Objekt\footnote{https://docs.cycling74.com/max5/refpages/max-ref/noteout.html}. Dieses nimmt die Eingabe-Parameter und sendet die note-on- und note-of-Befehle an den MIDI-Port. Als zusätzlichen Eingabe-Parameter kann man bei dem "'noteout"'-Objekt den MIDI-Kanal wählen. Da wir jedoch nur Klaviertöne benötigen haben wir die Standardeinstellungen, Kanal 1, übernommen.
 
@@ -108,7 +123,7 @@ Die Kandidaten mussten jeweils eine Testreihe zum Rhythmusgedächtnis und eine z
 Bei beiden Testreihen gibt es fünf verschiedene Tonfolgen. Jede besteht aus sechs bis elf einzelnen Tönen. Die erste Tonfolge ist bei beiden Tests als Vorbereitung gedacht. Diese sind möglichst einfach gewählt: Eine bekannte Melodie (Jingle Bells) und eine einfache Rhythmusfolge. Durch diese Beispiele wird der Kandidat mit dem Ablauf, der Programmbedienung und der Antwortform bekannt gemacht. Die Resultate hiervon wurden nicht in die Auswertung übernommen. \\
 Die übrigen vier Rhythmusfolgen waren Eigenkompositionen mit höherer Komplexität als der Einstiegsrhythmus.
 Drei unserer vier übrigen Melodiefolgen waren Teile einer Melodie für unsere Nutzer möglichst unbekannter Musikstücke.
-Zwei dieser Melodien stammen aus dem Lied "`The Darkest Nights"' der Band "`As I Lay Dying"', die dritte Melodie stammt \textcolor{red}{aus der irgendwas von bach}.\\
+Zwei dieser Melodien stammen aus dem Lied "`The Darkest Nights"' der Band "`As I Lay Dying"', die dritte Melodie stammt aus einer Komposition von Bach.\\
 Die fünfte Melodie ist eine selbst komponierte Tonfolge. Durch diese Diversität der Melodien erhoffen wir uns repräsentative Ergebnisse für das Melodiegedächtnis \textcolor{red}{<- dann eigentlich auch bei den rhythmen, da aber alles eigenkomposition}. Die Tonfolgen dürfen beliebig häufig angehört werden, bevor der Teilnehmer die Antworten gibt.
  
 Nach den Tests mussten die Kandidaten noch einen weiteren kurzen Fragebogen ausfüllen in dem aufgenommen wurde wie schwer sie die einzelnen Tests gefunden haben. Außerdem stand hier ein Textfeld für freie Kommentare zur Verfügung. 
