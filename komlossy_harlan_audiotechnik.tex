@@ -54,7 +54,7 @@ Der zweite Teil des Tests untersucht die Fähigkeit Änderungen in der Tonhöhe 
 \begin{figure}[H]
 \centering
 \includegraphics[width=1.0\linewidth]{Abbildungen/wienertest.jpg}
-\caption{Wiener Test für Musikalität}
+\caption{Wiener Test für Musikalität, entnommen \cite{laengle:2003}}
 \label{pic:wienertest}
 \end{figure}
 
@@ -86,7 +86,7 @@ Drückt man auf "'start~test"' geht die Oberfläche in den zweiten Präsentation
 \end{figure}
 
 Die Tonfolgen werden über das MIDI-Interface von Max an die Soundkarte des Computer weitergegeben um für den Nutzer hörbar gemacht zu werden. Mit dem "'makenote"'-Objekt\footnote{https://docs.cycling74.com/max5/refpages/max-ref/makenote.html} von Max\slash MSP werden MIDI-Befehle erzeugt. Als Eingabe-Parameter des Objektes haben wir die Tonhöhe des aktuellen Tones, die Anschlagsstärke und die Dauer des Tones  eingegeben. Das Objekt gibt daraufhin die Tonhöhe als Zahl gepaart mit der Anschlagstärke aus (note-on-Befehl). Nachdem die als Eingabe-Parameter übergebene Länge des Tones zeitlich verstrichen ist, sendet das Objekt erneut die Tonhöhe als Ausgabe aus, dieses Mal jedoch gepaart mit der Anschlagstärke 0 (note-off-Befehl).\\
-Die Ausgaben des "'makenote"'-Objektes gehen direkt in das "'noteout"'-Objekt\footnote{https://docs.cycling74.com/max5/refpages/max-ref/noteout.html}. Dieses nimmt die Eingabe-Parameter und sendet die note-on- und note-of-Befehle an den MIDI-Port. Als zusätzlichen Eingabe-Parameter kann man bei dem "'noteout"'-Objekt den MIDI-Kanal wählen. Da wir jedoch nur Klaviertöne benötigen haben wir die Standardeinstellungen, Kanal 1, übernommen.
+Die Ausgaben des "'makenote"'-Objektes gehen direkt in das "'noteout"'-Objekt\footnote{https://docs.cycling74.com/max5/refpages/max-ref/noteout.html}. Dieses nimmt die Eingabe-Parameter und sendet die note-on- und note-of-Befehle an den MIDI-Port. Als zusätzlichen Eingabe-Parameter kann man bei dem "'noteout"' -Objekt den MIDI-Kanal wählen. Da wir jedoch nur Klaviertöne benötigen haben wir die Standardeinstellungen, Kanal 1, übernommen.
 
 In Abbildung~\ref{pic:max} sieht man einen Ausschnitt aus unseren Programmen. Die Melodie, dargestellt als Felder mit den der Tonhöhe entsprechenden Zahlen enthaltend wird vor Kontakt mit dem "'makenote"'-Objekt gefiltert. Wird ein Ton mit Tonhöhe 0 abgespielt, wird dieser Ton als Pause gewertet und wird rausgefiltert und das "'makenote"'-Objekt wird nicht aktiviert. Alle anderen Töne gelangen als erstes Argument in das "'makenote"'-Objekt. Dieses erhält zwei weitere Argumente: Das zweite Argument bestimmt die Anschlagsstärke, das dritte Argument die Länge des Tones. Auf der Abbildung ist zu erkennen, dass wir 127 als Standardanschlagsstärke und 200 als Standardtonlänge gewählt haben.\\
 Die beiden vom "'makenote"'-Objekt abgehenden Verbindungen führen direkt in das "'noteout"'-Objekt. Über die erste Verbindung wird die Tonhöhe und über die zweite Verbindung wird die Anschlagsstärke des Tones übermittelt. Das "'noteout"'-Objekt besitzt einen dritten Verbindungsanschluss über den der MIDI-Kanal gewählt wird. Wie oben beschrieben haben wir dort die Standardeinstellung belassen.
